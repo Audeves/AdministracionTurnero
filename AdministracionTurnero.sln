@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlantillaWeb19", "PlantillaWeb19\PlantillaWeb19.csproj", "{04D58A26-37A4-40B1-8581-15DE979E8BBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{EFDD55FC-851E-4427-86C5-FCDD51461468}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{382B9BE9-33DD-4801-A555-F032A27E9B89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{00BA8D73-3A74-4811-B249-F0ABD1DFD2CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04D58A26-37A4-40B1-8581-15DE979E8BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D58A26-37A4-40B1-8581-15DE979E8BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D58A26-37A4-40B1-8581-15DE979E8BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D58A26-37A4-40B1-8581-15DE979E8BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFDD55FC-851E-4427-86C5-FCDD51461468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFDD55FC-851E-4427-86C5-FCDD51461468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFDD55FC-851E-4427-86C5-FCDD51461468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFDD55FC-851E-4427-86C5-FCDD51461468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{382B9BE9-33DD-4801-A555-F032A27E9B89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{382B9BE9-33DD-4801-A555-F032A27E9B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{382B9BE9-33DD-4801-A555-F032A27E9B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{382B9BE9-33DD-4801-A555-F032A27E9B89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00BA8D73-3A74-4811-B249-F0ABD1DFD2CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00BA8D73-3A74-4811-B249-F0ABD1DFD2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00BA8D73-3A74-4811-B249-F0ABD1DFD2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00BA8D73-3A74-4811-B249-F0ABD1DFD2CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A18A4B6-1F1F-46C8-A65F-A0C071AA31C9}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs-csi:8080/tfs/itson
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Datos\\Datos.csproj
+		SccProjectName1 = Datos
+		SccLocalPath1 = Datos
+		SccProjectUniqueName2 = Entidades\\Entidades.csproj
+		SccProjectName2 = Entidades
+		SccLocalPath2 = Entidades
+		SccProjectUniqueName3 = Negocio\\Negocio.csproj
+		SccProjectName3 = Negocio
+		SccLocalPath3 = Negocio
+		SccProjectUniqueName4 = PlantillaWeb19\\PlantillaWeb19.csproj
+		SccProjectName4 = PlantillaWeb19
+		SccLocalPath4 = PlantillaWeb19
+	EndGlobalSection
+EndGlobal

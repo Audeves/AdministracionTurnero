@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "Unidades contacto";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+
+@section scripts{
+    <script type="text/javascript" language="javascript" src="@Url.Content("~/Scripts/App/Administracion/unidadesContacto.js?1")"></script>
+}
+
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Datos de contacto de unidades</h1>
+</div>
+<br />
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+        <input type="button" id="btnNuevo" name="btnNuevo" class="btn btn-primary" value="Nuevo">
+    </div>
+</div>
+<br />
+<div class="row">
+    <div id="gridUnidades" class="col-lg-12 mb-4">
+    </div>
+</div>
+<br />
+
+
+<!-- Modal -->
+<div id="modalUnidades" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="frmUnidades" name="frmUnidades">
+                    <input type="hidden" id="hidId" name="hidId" />
+                    <div class="form-group">
+                        <label for="cboUnidadCampus">Ubicación del campus</label>
+                        <div id="cboUnidadCampus" name="cboUnidadCampus"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtDireccion">Dirección</label>
+                        <input type="text" id="txtDireccion" name="txtDireccion" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtTelefono">Teléfono</label>
+                        <input type="text" id="txtTelefono" name="txtTelefono" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtEmailAdministrador">Email administrador</label>
+                        <input type="text" id="txtEmailAdministrador" name="txtEmailAdministrador" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtEmailEjecutivo">Email ejecutivo</label>
+                        <input type="text" id="txtEmailEjecutivo" name="txtEmailEjecutivo" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtEmailAuxiliar">Email auxiliar</label>
+                        <input type="text" id="txtEmailAuxiliar" name="txtEmailAuxiliar" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <input type="button" id="btnCerrar" name="btnCerrar" class="btn btn-secondary" value="Cerrar" data-dismiss="modal">
+                <input type="button" id="btnAccion" name="btnAccion" class="btn btn-primary" value="">
+            </div>
+        </div>
+    </div>
+</div>

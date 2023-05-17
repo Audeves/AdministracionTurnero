@@ -1,0 +1,14 @@
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Negocio\bin\Debug\Negocio.dll
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Negocio\bin\Debug\Negocio.pdb
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Negocio\bin\Debug\Datos.dll
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Negocio\bin\Debug\Entidades.dll
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Negocio\bin\Debug\EntityFramework.dll
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Negocio\bin\Debug\Datos.pdb
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Negocio\bin\Debug\Datos.dll.config
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Negocio\bin\Debug\Entidades.pdb
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Negocio\bin\Debug\EntityFramework.xml
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Negocio\obj\Debug\Negocio.dll
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Negocio\obj\Debug\Negocio.pdb

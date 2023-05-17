@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewBag.Title = "Atención de citas de hoy";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+@section scripts{
+    @Scripts.Render("~/js/atencionCitasHoy")
+}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Atención de citas de hoy</h1>
+</div>
+<br />
+
+<div id="tabOpciones">
+    <ul>
+        <li style="margin-left: 20px;">Citas de hoy</li>
+        <li>Formulario</li>
+    </ul>
+    <div style="margin: 15px;">
+        <div class="row">
+            <div id="gridCitasHoy" style="margin: 15px;">
+            </div>
+        </div>
+    </div>
+    <div style="margin: 15px;">
+        <form id="frmDetalle" name="frmDetalle">
+            <input type="hidden" id="hIdRegistro" />
+            <div class="form-row">
+                <div class="form-group">
+                    <h5 style="margin: 5px;"> Datos de la solicitud</h5>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label for="txtFechaHoraCita">Fecha y hora de cita</label>
+                    <input type="text" readonly class="form-control" id="txtFechaHoraCita" />
+                </div>
+                <div class="col-2">
+                    <label for="txtEstatus">Estatus</label>
+                    <input type="text" readonly class="form-control" id="txtEstatus" />
+                </div>
+                <div class="col-2">
+                    <label for="txtFolio">Folio</label>
+                    <input type="text" readonly class="form-control" id="txtFolio" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <label for="txtNombreSolicitante">Nombre del solicitante</label>
+                    <input type="text" class="form-control" id="txtNombreSolicitante" />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="txtEmplId">ID ITSON</label>
+                    <input type="text" class="form-control" id="txtEmplId" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="txtTramite">Trámite</label>
+                <input type="text" class="form-control" id="txtTramite" />
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-7">
+                    <label for="txtEmail">Email</label>
+                    <input type="text" class="form-control" id="txtEmail" />
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="txtTelefono">Teléfono</label>
+                    <input type="text" class="form-control" id="txtTelefono" />
+                </div>
+            </div>
+            <hr />
+            <div class="form-row">
+                <div class="form-group">
+                    <h6 style="margin: 5px;"> Datos adicionales</h6>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-7">
+                    <label for="txtNombrePersonaAutorizada">Persona autorizada</label>
+                    <input type="text" class="form-control" id="txtNombrePersonaAutorizada" />
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="txtParentezco">Parentesco</label>
+                    <input type="text" class="form-control" id="txtParentezco" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="txtComentariosAdicionales">Comentarios adicionales</label>
+                <textarea id="txtComentariosAdicionales" class="form-control" style="resize: none;"
+                          maxlength="8000"></textarea>
+            </div>
+            <hr />
+            <div class="form-row">
+                <div class="form-group">
+                    <h5 style="margin: 5px;"> Administrar</h5>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <label for="txtComentariosAdministrador">Comentarios para correo</label>
+                    <textarea id="txtComentariosAdministrador" class="form-control" style="resize: none;"
+                              maxlength="8000"></textarea>
+                </div>
+            </div>
+            <br /><br />
+            <div class="row justify-content-center">
+                <input type="button" class="btn btn-success" id="btnRegistrarAsistencia" value="Registrar asistencia" />
+            </div>
+            <br />
+            <div class="row justify-content-center">
+                <input type="button" class="btn btn-secondary" id="btnRegresar" value="Regresar al listado" />
+            </div>
+        </form>
+    </div>
+</div>

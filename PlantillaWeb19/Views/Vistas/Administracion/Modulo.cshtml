@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewBag.Title = "Modulo";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+@section scripts{
+    @Scripts.Render("~/js/modulos")
+}
+
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Módulos y submódulos</h1>
+</div>
+<hr/>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+        <h1 class="h4 mb-0 tex-gray-800">Módulos</h1>
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+        <input type="button" id="btnNuevo" name="btnNuevo" class="btn btn-primary" value="Nuevo">
+    </div>
+</div>
+<br />
+<div class="row">
+    <div id="gridModulos" class="col-lg-12 mb-4">
+    </div>
+</div>
+<hr />
+
+
+
+<!-- Modal -->
+<div id="modalModulos" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="frmModulos" name="frmModulos">
+                    <input type="hidden" id="hidId" name="hidId" />
+                    <div class="form-group">
+                        <label for="txtNombre">Nombre</label>
+                        <input type="text" id="txtNombre" name="txtNombre" class="form-control" maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="chkActivo">Activo</label>
+                        <div id="chkActivo"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <input type="button" id="btnCerrar" name="btnCerrar" class="btn btn-secondary" value="Cerrar" data-dismiss="modal">
+                <input type="button" id="btnAccion" name="btnAccion" class="btn btn-primary" value="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+        <h1 class="h4 mb-0 tex-gray-800">Submódulos</h1>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+        <input type="button" id="btnNuevoSubModulo" name="btnNuevoSubModulo" class="btn btn-primary" value="Nuevo">
+    </div>
+</div>
+<br />
+<div class="row">
+    <div id="gridSubModulos" class="col-lg-12 mb-4">
+    </div>
+</div>
+<br />
+
+<!-- Modal Submodulos -->
+<div id="modalSubModulos" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tituloModalSubModulos"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="frmSubModulos" name="frmSubModulos">
+                    <input type="hidden" id="hidIdSubModulo" name="hidIdSubModulo" />
+                    <div class="form-group">
+                        <label for="txtNombreSubModulo">Nombre</label>
+                        <input type="text" id="txtNombreSubModulo" name="txtNombreSubModulo" class="form-control" maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="cboModulo">Módulo</label>
+                        <div id="cboModulo"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtClaseIconoSubModulo">Clase Icono</label>
+                        <input type="text" id="txtClaseIconoSubModulo" name="txtClaseIconoSubModulo" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="chkActivoSubModulo">Activo</label>
+                        <div id="chkActivoSubModulo"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <input type="button" id="btnCerrarSubModulo" name="btnCerrarSubModulo" class="btn btn-secondary" value="Cerrar" data-dismiss="modal">
+                <input type="button" id="btnAccionSubModulo" name="btnAccionSubModulo" class="btn btn-primary" value="">
+            </div>
+        </div>
+    </div>
+</div>

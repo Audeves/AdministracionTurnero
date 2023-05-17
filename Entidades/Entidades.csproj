@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{382B9BE9-33DD-4801-A555-F032A27E9B89}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Entidades</RootNamespace>
+    <AssemblyName>Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entidades\Administracion\ExcepcionControladorAccion.cs" />
+    <Compile Include="Entidades\Administracion\Modulo.cs" />
+    <Compile Include="Entidades\Administracion\Pantalla.cs" />
+    <Compile Include="Entidades\Administracion\PantallaAccion.cs" />
+    <Compile Include="Entidades\Administracion\Perfil.cs" />
+    <Compile Include="Entidades\Administracion\SubModulo.cs" />
+    <Compile Include="Entidades\Administracion\Usuario.cs" />
+    <Compile Include="Entidades\Citas\BitacoraMovimientoCita.cs" />
+    <Compile Include="Entidades\Citas\HistorialCancelacionMasiva.cs" />
+    <Compile Include="Entidades\Citas\SolicitudCita.cs" />
+    <Compile Include="Entidades\Citas\TramiteCita.cs" />
+    <Compile Include="Entidades\Configuracion\AreaAtencion.cs" />
+    <Compile Include="Entidades\Configuracion\ConfiguracionPantalla.cs" />
+    <Compile Include="Entidades\Configuracion\ConfiguracionTurnero.cs" />
+    <Compile Include="Entidades\Configuracion\ModuloAtencion.cs" />
+    <Compile Include="Entidades\Configuracion\Proceso.cs" />
+    <Compile Include="Entidades\Configuracion\Tramite.cs" />
+    <Compile Include="Entidades\General\CamposRegistroBase.cs" />
+    <Compile Include="Entidades\General\Campus.cs" />
+    <Compile Include="Entidades\General\Empleado.cs" />
+    <Compile Include="Entidades\General\EntityBase.cs" />
+    <Compile Include="Entidades\General\SingleString.cs" />
+    <Compile Include="Entidades\General\SQLEntityBase.cs" />
+    <Compile Include="Entidades\Principales\ModuloAtencionBitacora.cs" />
+    <Compile Include="Entidades\Principales\Turno.cs" />
+    <Compile Include="Entidades\Principales\TurnoEtapa.cs" />
+    <Compile Include="Enumeradores\EstatusRegistro.cs" />
+    <Compile Include="Enumeradores\EstatusSolicitudCita.cs" />
+    <Compile Include="Enumeradores\EstatusTurnoEtapa.cs" />
+    <Compile Include="Enumeradores\RespuestaEstatus.cs" />
+    <Compile Include="Enumeradores\TipoMovimientoCita.cs" />
+    <Compile Include="Excepciones\ExcepcionNegocio.cs" />
+    <Compile Include="GridSupport\ListResult.cs" />
+    <Compile Include="GridSupport\PagingConfig.cs" />
+    <Compile Include="GridSupport\PagingResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransporteGrid\Administracion\ModuloGRIDDTO.cs" />
+    <Compile Include="TransporteGrid\Administracion\PantallaGRIDDTO.cs" />
+    <Compile Include="TransporteGrid\Administracion\PerfilGRIDDTO.cs" />
+    <Compile Include="TransporteGrid\Administracion\SubModuloGRIDDTO.cs" />
+    <Compile Include="TransporteGrid\Administracion\UsuarioGRIDDTO.cs" />
+    <Compile Include="TransporteGrid\Citas\BitacoraMovimientoCitaGRIDDTO.cs" />
+    <Compile Include="TransporteGrid\Citas\SolicitudCitaGRIDDTO.cs" />
+    <Compile Include="TransporteGrid\Configuracion\AreaAtencionGRIDDTO.cs" />
+    <Compile Include="TransporteGrid\Configuracion\ConfiguracionPantallaGRIDDTO.cs" />
+    <Compile Include="TransporteGrid\Configuracion\ConfiguracionTurneroGRIDDTO.cs" />
+    <Compile Include="TransporteGrid\Configuracion\ModuloAtencionGRIDDTO.cs" />
+    <Compile Include="TransporteGrid\Configuracion\ProcesoGRIDDTO.cs" />
+    <Compile Include="TransporteGrid\Configuracion\TramiteGRIDDTO.cs" />
+    <Compile Include="TransporteGrid\Principales\TurnoGRIDDTO.cs" />
+    <Compile Include="Transporte\ComboDTO.cs" />
+    <Compile Include="Transporte\Reportes\SolicitudCitaReporteDTO.cs" />
+    <Compile Include="Transporte\RespuestaDTO.cs" />
+    <Compile Include="Transporte\SubModuloDTO.cs" />
+    <Compile Include="Utils\Constantes.cs" />
+    <Compile Include="Utils\Entities.cs" />
+    <Compile Include="Utils\EnumeradoresUtilsStatic.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

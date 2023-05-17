@@ -1,0 +1,279 @@
+﻿
+@{
+    ViewBag.Title = "AdministracionSolicitudesCita";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+@section scripts{
+    @Scripts.Render("~/js/administracionSolicitudesCita")
+}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Administración de citas</h1>
+</div>
+<br />
+
+<div id="tabOpciones">
+    <ul>
+        <li style="margin-left: 20px;">Consultas</li>
+        <li>Formulario</li>
+        <li>Citas de hoy</li>
+        <li>Bitacora de movimientos</li>
+        <li>Cancelacion "masiva"</li>
+    </ul>
+    <div style="margin: 15px;">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+                <table>
+                    <tr>
+                        <td>Estatus: </td>
+                        <td>
+                            <div id="cboEstatusSolicitudCita"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Desde </td>
+                        <td>
+                            <div id="dpkFechaDesde"></div>
+                        </td>
+                        <td>
+                            hasta
+                        </td>
+                        <td>
+                            <div id="dpkFechaHasta"></div>
+                        </td>
+                        <td>
+                            <input type="button" id="btnConsultar" name="btnConsultar" class="btn btn-primary" value="Consultar">
+                        </td>
+                        <td>
+                            <input type="button" id="btnExportar" name="btnExportar" class="btn btn-primary" value="Exportar a Excel" style="display: none;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            @*<h5 id="lblResultado" style="margin: 15px;"></h5>*@
+            <div id="gridResultados" style="margin: 15px;">
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div style="margin: 15px;">
+        <form id="frmDetalle" name="frmDetalle">
+            <input type="hidden" id="hIdRegistro" />
+            <div class="form-row">
+                <div class="form-group">
+                    <h5 style="margin: 5px;"> Datos de la solicitud</h5>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label for="txtFechaHoraCita">Fecha y hora de cita</label>
+                    <input type="text" readonly class="form-control" id="txtFechaHoraCita" />
+                </div>
+                <div class="col-2">
+                    <label for="txtEstatus">Estatus</label>
+                    <input type="text" readonly class="form-control" id="txtEstatus" />
+                </div>
+                <div class="col-2">
+                    <label for="txtFolio">Folio</label>
+                    <input type="text" readonly class="form-control" id="txtFolio" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <label for="txtNombreSolicitante">Nombre del solicitante</label>
+                    <input type="text" class="form-control" id="txtNombreSolicitante" />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="txtEmplId">ID ITSON</label>
+                    <input type="text" class="form-control" id="txtEmplId" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="txtTramite">Trámite</label>
+                <input type="text" class="form-control" id="txtTramite" />
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-7">
+                    <label for="txtEmail">Email</label>
+                    <input type="text" class="form-control" id="txtEmail" />
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="txtTelefono">Teléfono</label>
+                    <input type="text" class="form-control" id="txtTelefono" />
+                </div>
+            </div>
+            <hr />
+            <div class="form-row">
+                <div class="form-group">
+                    <h6 style="margin: 5px;"> Datos adicionales</h6>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-7">
+                    <label for="txtNombrePersonaAutorizada">Persona autorizada</label>
+                    <input type="text" class="form-control" id="txtNombrePersonaAutorizada" />
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="txtParentezco">Parentesco</label>
+                    <input type="text" class="form-control" id="txtParentezco" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="txtComentariosAdicionales">Comentarios adicionales</label>
+                <textarea id="txtComentariosAdicionales" class="form-control" style="resize: none;"
+                          maxlength="8000"></textarea>
+            </div>
+            <hr />
+            <div class="form-row">
+                <div class="form-group">
+                    <h5 style="margin: 5px;"> Administrar</h5>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <label for="txtComentariosAdministrador">Comentarios para correo</label>
+                    <textarea id="txtComentariosAdministrador" class="form-control" style="resize: none;"
+                              maxlength="8000"></textarea>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="btnTextoDefault"></label>
+                    <input type="button" class="btn btn-primary mr-1" id="btnTextoDefaultAgendar" value="Agregar comentario para agendar" />
+                    <input type="button" class="btn btn-warning mr-1" id="btnTextoDefaultRechazar" value="Agregar comentario para rechazar" />
+                </div>
+            </div>
+            <br /><br />
+            <div class="row justify-content-center">
+                <input type="button" class="btn btn-success mr-5" id="btnAgendar" value="Agendar cita" />
+                <input type="button" class="btn btn-danger" id="btnRechazar" value="Rechazar cita" />
+                <input type="button" class="btn btn-success" id="btnRegistrarAsistencia" value="Registrar asistencia" />
+            </div>
+            <br />
+            <div class="row justify-content-center">
+                <input type="button" class="btn btn-secondary" id="btnRegresar" value="Regresar al listado" />
+            </div>
+        </form>
+    </div>
+    <div style="margin: 15px;">
+        <div class="row">
+            <div id="gridCitasHoy" style="margin: 15px;">
+            </div>
+        </div>
+    </div>
+    <div style="margin: 15px;">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+                <table>
+                    <tr>
+                        <td>Tipo de movimiento: </td>
+                        <td>
+                            <div id="cboTipoMovimientoCita"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Desde </td>
+                        <td>
+                            <div id="dpkFechaDesdeBitacora"></div>
+                        </td>
+                        <td>
+                            hasta
+                        </td>
+                        <td>
+                            <div id="dpkFechaHastaBitacora"></div>
+                        </td>
+                        <td>
+                            <input type="button" id="btnConsultarBitacora" name="btnConsultarBitacora" class="btn btn-primary" value="Consultar">
+                        </td>
+                        <td>
+                            <input type="button" id="btnExportarBitacora" name="btnExportarBitacora" class="btn btn-primary" value="Exportar a Excel" style="display: none;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div id="gridResultadosBitacora" style="margin: 15px;">
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div style="margin: 15px;">
+        <div>
+            <div style="justify-content: center; margin: 15px;">
+                <p>Si no se selecciona ninguna fecha se considerará sin límite, por ejemplo: </p>
+                <ul>
+                    <li>Si solo se especifica la fecha de inicio (desde) se cancelarán todas las citas a partir de esa fecha</li>
+                    <li>Si solo se especifica la fecha de fin (hasta) se cancelarán todas las citas desde el día de hoy hasta la fecha especificada</li>
+                    <li>Si no se especifica ninguna fecha se cancelarán todas las citas</li>
+                </ul>
+                <p>Además, para las citas ya agendadas (en caso de seleccionarlas) también se eliminarán de servicios generales.</p>
+                <hr />
+                <br />
+                <label>Rango de fechas: </label>
+                <table>
+                    <tr>
+                        <td>
+                            Desde
+                        </td>
+                        <td>
+                            <div id="dpkFechaDesdeCancelacion"></div>
+                        </td>
+                        <td>
+                            hasta
+                        </td>
+                        <td>
+                            <div id="dpkFechaHastaCancelacion"></div>
+                        </td>
+                    </tr>
+                </table>
+                <br /><br />
+                <label>Estatus: </label>
+                <table>
+                    <tr>
+                        <td>
+                            <div id="chkPendientes">Pendientes</div>
+                        </td>
+                        <td>
+                            <div id="chkAgendadas">Agendadas</div>
+                        </td>
+                    </tr>
+                </table>
+
+                <br /><br />
+                <label>Enviar correo electrónico: </label>
+                <table>
+                    <tr>
+                        <td>
+                            <div id="rbtnSi">Si</div>
+                        </td>
+                        <td>
+                            <div id="rbtnNo">No</div>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <div class="form-row">
+                    <div class="form-group col-md-8">
+                        <label for="txtComentariosCancelacion">Comentarios para correo</label>
+                        <textarea id="txtComentariosCancelacion" class="form-control" style="resize: none;"
+                                  maxlength="8000"></textarea>
+                    </div>
+                    <div class="form-group col-md-2">&nbsp;</div>
+                </div>
+
+                <br /><br /><br />
+                <div class="row justify-content-center">
+                    <input type="button" class="btn btn-danger" id="btnCancelacionMasiva" value="Cancelar citas" />
+                </div>
+                <br />
+                <div class="row justify-content-center">
+                    <input type="button" class="btn btn-secondary" id="btnRegresarCancelacionMasiva" value="Regresar al listado" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

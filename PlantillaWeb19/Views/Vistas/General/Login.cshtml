@@ -1,0 +1,65 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Login - Turnero</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href=@Url.Content("~/Template/css/sb-admin-2.css") rel="stylesheet">
+</head>
+<body class="bg-gradient-primary">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <img src=@Url.Content("~/Template/img/ITSON-MARCA.png") class="img-fluid" /><br/>
+                                        <label class="big" style="color: #006db6 !important; font-weight:bold">Turnero</label>
+                                    </div>
+                                    <form id="frmAcceder">
+                                        <div class="form-group">
+                                            <input type="text" id="txtUsuario" name="txtUsuario" class="form-control form-control-user" placeholder="Ingresar usuario">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" id="txtContraseña" name="txtContraseña" class="form-control form-control-user" placeholder="Ingresar contraseña">
+                                        </div>
+                                    </form>
+                                    <input type="button" id="btnIniciar" name="btnIniciar" value="INICIAR SESIÓN" class="btn btn-primary btn-user btn-block">
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="sticky-footer" style="position: fixed; bottom:0; color: white;">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span><b>Instituto Tecnológico de Sonora</b> -- Departamento de Tecnologías y Servicios Informáticos @DateTime.Now.ToString("yyyy") </span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+
+    <script type="text/javascript" src=@Url.Content("~/Scripts/Librerias/jquery-3.0.0.min.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/Librerias/jquery.validate.min.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Template/js/bootstrap.min.js")></script>
+    @Scripts.Render("~/js/appLogin")
+
+</body>
+</html>

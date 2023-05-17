@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "Turneros";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+@section scripts{
+    @Scripts.Render("~/js/turneros")
+}
+
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Configuración de turneros</h1>
+</div>
+<br />
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+        <input type="button" id="btnNuevo" name="btnNuevo" class="btn btn-primary" value="Nuevo">
+    </div>
+</div>
+<br />
+<div class="row">
+    <div id="gridTurneros" class="col-lg-12 mb-4">
+    </div>
+</div>
+<hr />
+
+
+
+<!-- Modal -->
+<div id="modalTurneros" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="frmTurneros" name="frmTurneros">
+                    <input type="hidden" id="hidId" name="hidId" />
+                    <div class="form-group">
+                        <label for="txtNombre">Nombre</label>
+                        <input type="text" id="txtNombre" name="txtNombre" class="form-control" maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtIP">IP</label>
+                        <input type="text" id="txtIP" name="txtIP" class="form-control" maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="cboCampus">Campus</label>
+                        <div id="cboCampus"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gridAreasAtencion">Áreas de atención</label>
+                        <div id="gridAreasAtencion"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="chkActivo">Activo</label>
+                        <div id="chkActivo"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="chkId">Solicitar ID</label>
+                        <div id="chkId"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="chkNombre">Solicitar nombre</label>
+                        <div id="chkNombre"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <input type="button" id="btnCerrar" name="btnCerrar" class="btn btn-secondary" value="Cerrar" data-dismiss="modal">
+                <input type="button" id="btnAccion" name="btnAccion" class="btn btn-primary" value="">
+            </div>
+        </div>
+    </div>
+</div>

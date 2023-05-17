@@ -1,0 +1,14 @@
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Datos\bin\Debug\Datos.dll.config
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Datos\bin\Debug\Datos.dll
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Datos\bin\Debug\Datos.pdb
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Datos\bin\Debug\Entidades.dll
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Datos\bin\Debug\EntityFramework.dll
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Datos\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Datos\bin\Debug\Entidades.pdb
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Datos\bin\Debug\EntityFramework.xml
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Datos\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Datos\obj\Debug\Datos.csprojAssemblyReference.cache
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Datos\obj\Debug\Datos.csproj.CopyComplete
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Datos\obj\Debug\Datos.dll
+D:\Users\practicante3csi\Documents\AdministracionTurnos\AdministracionTurnero\Datos\obj\Debug\Datos.pdb

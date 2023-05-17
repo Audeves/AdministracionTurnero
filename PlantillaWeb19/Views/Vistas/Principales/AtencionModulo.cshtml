@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "AtencionModulo";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+@section scripts{
+    @Scripts.Render("~/js/atencionModulo")
+}
+
+<div class="container text-center" id="divIniciarAtencion" style="display: none">
+    <form id="frmIniciarAtencion" name="frmIniciarAtencion">
+        <div class="form-group">
+            <label for="cboModulo">Selecciona tu módulo de atención</label>
+            <div id="cboModulo"></div>
+        </div>
+    </form>
+    <div class="form-group">
+        <input type="button" id="btnIniciarAtencion" name="btnIniciarAtencion" class="btn btn-primary" value="Iniciar atención">
+    </div>
+</div>
+
+<div id="divAtendiendo" style="display: none">
+    <div class="container">
+        <div class="text-center row">
+            <table style="border: 1px solid" width="70%">
+                <tr>
+                    <td></td>
+                    <td>
+                        <label id="lblId">Id:1231231</label>
+                    </td>
+                    <td>
+                        <input type="button" id="btnFinalizarAtencion" name="btnFinalizarAtencion" class="btn btn-primary" value="Finalizar atención">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Turno actual:
+                    </td>
+                    <td>
+                        <label id="lblNombre">Nombre del cliente</label>
+                    </td>
+                    <td>
+                        <input type="button" id="btnPonerEspera" name="btnPonerEspera" class="btn btn-primary" value="Poner en espera">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2 id="lblTurno"><strong>0</strong></h2>
+                    </td>
+                    <td>
+                        <label id="lblTramite">Algun tramite</label>
+                    </td>
+                    <td>
+                        <input type="button" id="btnCancelar" name="btnCancelar" class="btn btn-primary" value="Cancelar">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <label id="lblCorreo">jose.quintero@itson.edu.mx</label>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>&nbsp;&nbsp;&nbsp;
+            <input type="button" id="btnSiguienteTurno" name="btnSiguienteTurno" class="btn btn-primary" value="Siguiente turno">
+        </div>
+    </div>
+    <br/><br /><br />
+    <div class="container row col-lg-12">
+        <div id="gridTurnosPorAtender"></div>
+        <div id="gridTurnosEnEspera"></div>
+    </div>
+    <br /><br /><br />
+    <div class="row col-lg-12">
+        <div style="float: right;">
+            <input type="button" id="btnCancelarTodos" name="btnCancelarTodos" class="btn btn-primary" value="Cancelar todos">
+            <input type="button" id="btnTerminarAtencionVentanilla" name="btnTerminarAtencionVentanilla" class="btn btn-primary" value="Terminar atención de ventanilla">
+        </div>
+    </div>
+    
+</div>
